@@ -53,7 +53,7 @@ namespace UnicomManagementSystem.Controller
             {
                 string query = "INSERT INTO Exams (ExamName, Date, SubjectId) VALUES (@ExamName, @Date, @SubjectId)";
                 SQLiteCommand cmd = new SQLiteCommand(query, conn);
-                cmd.Parameters.AddWithValue("@ExamName", exam.ExamName);
+                //cmd.Parameters.AddWithValue("@ExamName", exam.ExamName);
                 cmd.Parameters.AddWithValue("@Date", exam.Date);
                 cmd.Parameters.AddWithValue("@SubjectId", exam.SubjectId);
 
@@ -68,7 +68,7 @@ namespace UnicomManagementSystem.Controller
             {
                 string query = "UPDATE Exams SET ExamName = @ExamName, Date = @Date, SubjectId = @SubjectId WHERE Id = @Id";
                 SQLiteCommand cmd = new SQLiteCommand(query, conn);
-                cmd.Parameters.AddWithValue("@ExamName", exam.ExamName);
+                //cmd.Parameters.AddWithValue("@ExamName", exam.ExamName);
                 cmd.Parameters.AddWithValue("@Date", exam.Date);
                 cmd.Parameters.AddWithValue("@SubjectId", exam.SubjectId);
                 cmd.Parameters.AddWithValue("@Id", exam.Id);
@@ -106,7 +106,7 @@ namespace UnicomManagementSystem.Controller
                     return new Exam
                     {
                         Id = (int)reader["Id"],
-                        ExamName = reader["ExamName"].ToString(),
+                        //ExamName = reader["ExamName"].ToString(),
                         Date = Convert.ToDateTime(reader["Date"]),
                         SubjectId = (int)reader["SubjectId"]
                     };

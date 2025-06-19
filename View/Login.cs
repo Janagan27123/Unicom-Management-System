@@ -16,5 +16,16 @@ namespace UnicomManagementSystem.View
         {
             InitializeComponent();
         }
+
+        private void Login_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btn_login_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            Exam.ActiveForm = this;
+        }
     }
 }

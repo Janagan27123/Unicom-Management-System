@@ -28,3 +28,6 @@ Z:\UnicomManagementSystem\UnicomManagementSystem\obj\Debug\net8.0-windows\refint
 Z:\UnicomManagementSystem\UnicomManagementSystem\obj\Debug\net8.0-windows\UnicomManagementSystem.pdb
 Z:\UnicomManagementSystem\UnicomManagementSystem\obj\Debug\net8.0-windows\UnicomManagementSystem.genruntimeconfig.cache
 Z:\UnicomManagementSystem\UnicomManagementSystem\obj\Debug\net8.0-windows\ref\UnicomManagementSystem.dll
+Z:\UnicomManagementSystem\UnicomManagementSystem\obj\Debug\net8.0-windows\UnicomManagementSystem.Properties.Resources.resources
+Z:\UnicomManagementSystem\UnicomManagementSystem\obj\Debug\net8.0-windows\UnicomManagementSystem.View.Home.resources
+Z:\UnicomManagementSystem\UnicomManagementSystem\obj\Debug\net8.0-windows\UnicomManagementSystem.View.Login.resources

@@ -10,6 +10,6 @@ namespace UnicomManagementSystem.Model
     {
         public int Id { get; set; }
         public string CourseName { get; set; }
-        public string Department { get; set; }
+        //public string Department { get; set; }
     }
 }
