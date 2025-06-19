@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace UnicomManagementSystem.Data
 {
-    using System.Data.SQLite;
+    //using System.Data.SQLite;
 
     public static class DatabaseManager
     {
@@ -15,7 +15,7 @@ namespace UnicomManagementSystem.Data
 
         public static SQLiteConnection GetConnection()
         {
-            var conn = new SQLiteConnection(connectionString);          
+            var conn = new SQLiteConnection(connectionString);
             conn.Open();
             return conn;
         }

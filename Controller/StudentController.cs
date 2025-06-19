@@ -33,7 +33,7 @@ namespace UnicomManagementSystem.Controller
 
             using (var conn = DatabaseManager.GetConnection())
             {
-                conn.Open(); // 🔥 Required!
+                conn.Open(); //  Required!
 
                 string query = "SELECT * FROM Students";
 

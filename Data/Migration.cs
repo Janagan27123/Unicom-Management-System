@@ -56,7 +56,7 @@ namespace UnicomManagementSystem.Data
                 Id INTEGER PRIMARY KEY AUTOINCREMENT,
                 StudentId INTEGER,
                 ExamId INTEGER,
-                MarksObtained INTEGER,
+                Marksvalue INTEGER,
                 FOREIGN KEY (StudentId) REFERENCES Students(Id),
                 FOREIGN KEY (ExamId) REFERENCES Exams(Id)
                 );

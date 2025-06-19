@@ -11,7 +11,7 @@ namespace UnicomManagementSystem.Model
         public int Id { get; set; }
         public int SubjectId { get; set; }
         public int RoomId { get; set; }
-        public DayOfWeek Day { get; set; }
+        public string Day { get; set; }
         public TimeSpan StartTime { get; set; }
         public TimeSpan EndTime { get; set; }
     }
