@@ -1,33 +1,32 @@
 {
   "format": 1,
   "restore": {
-    "Z:\\UnicomManagementSystem\\UnicomManagementSystem\\UnicomManagementSystem.csproj": {}
+    "C:\\Users\\SK Jana\\Desktop\\lllll\\Unicom-Management-System\\UnicomManagementSystem.csproj": {}
   },
   "projects": {
-    "Z:\\UnicomManagementSystem\\UnicomManagementSystem\\UnicomManagementSystem.csproj": {
+    "C:\\Users\\SK Jana\\Desktop\\lllll\\Unicom-Management-System\\UnicomManagementSystem.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "Z:\\UnicomManagementSystem\\UnicomManagementSystem\\UnicomManagementSystem.csproj",
+        "projectUniqueName": "C:\\Users\\SK Jana\\Desktop\\lllll\\Unicom-Management-System\\UnicomManagementSystem.csproj",
         "projectName": "UnicomManagementSystem",
-        "projectPath": "Z:\\UnicomManagementSystem\\UnicomManagementSystem\\UnicomManagementSystem.csproj",
-        "packagesPath": "C:\\Users\\UT010657\\.nuget\\packages\\",
-        "outputPath": "Z:\\UnicomManagementSystem\\UnicomManagementSystem\\obj\\",
+        "projectPath": "C:\\Users\\SK Jana\\Desktop\\lllll\\Unicom-Management-System\\UnicomManagementSystem.csproj",
+        "packagesPath": "C:\\Users\\SK Jana\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\SK Jana\\Desktop\\lllll\\Unicom-Management-System\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\UT010657\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\SK Jana\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
-          "net8.0-windows"
+          "net6.0-windows7.0"
         ],
         "sources": {
           "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
-          "C:\\Program Files\\dotnet\\library-packs": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
-          "net8.0-windows7.0": {
-            "targetAlias": "net8.0-windows",
+          "net6.0-windows7.0": {
+            "targetAlias": "net6.0-windows",
             "projectReferences": {}
           }
         },
@@ -35,17 +34,16 @@
           "warnAsError": [
             "NU1605"
           ]
-        },
-        "restoreAuditProperties": {
-          "enableAudit": "true",
-          "auditLevel": "low",
-          "auditMode": "direct"
         }
       },
       "frameworks": {
-        "net8.0-windows7.0": {
-          "targetAlias": "net8.0-windows",
+        "net6.0-windows7.0": {
+          "targetAlias": "net6.0-windows",
           "dependencies": {
+            "BCrypt.Net-Next": {
+              "target": "Package",
+              "version": "[4.0.3, )"
+            },
             "System.Data.SQLite.Core": {
               "target": "Package",
               "version": "[1.0.119, )"
@@ -57,8 +55,7 @@
             "net47",
             "net471",
             "net472",
-            "net48",
-            "net481"
+            "net48"
           ],
           "assetTargetFallback": true,
           "warn": true,
@@ -70,7 +67,7 @@
               "privateAssets": "none"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.300/PortableRuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.300\\RuntimeIdentifierGraph.json"
         }
       }
     }

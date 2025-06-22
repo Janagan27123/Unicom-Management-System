@@ -9,7 +9,7 @@ namespace UnicomManagementSystem.Model
     public class Course
     {
         public int Id { get; set; }
-        public string CourseName { get; set; }
+        public string CourseName { get; set; } = string.Empty;
         //public string Department { get; set; }
     }
 }

@@ -41,9 +41,9 @@ namespace UnicomManagementSystem.Controller
                             Id = Convert.ToInt32(reader["Id"]),
                             SubjectId = Convert.ToInt32(reader["SubjectId"]),
                             RoomId = Convert.ToInt32(reader["RoomId"]),
-                            Day = reader["Day"].ToString(),
-                            StartTime = TimeSpan.Parse(reader["StartTime"].ToString()),
-                            EndTime = TimeSpan.Parse(reader["EndTime"].ToString())
+                            Day = reader["Day"].ToString() ?? string.Empty,
+                            StartTime = TimeSpan.TryParse(reader["StartTime"].ToString(), out var startTime) ? startTime : TimeSpan.Zero,
+                            EndTime = TimeSpan.TryParse(reader["EndTime"].ToString(), out var endTime) ? endTime : TimeSpan.Zero
                         });
                     }
                 }
@@ -70,9 +70,9 @@ namespace UnicomManagementSystem.Controller
                             Id = Convert.ToInt32(reader["Id"]),
                             SubjectId = Convert.ToInt32(reader["SubjectId"]),
                             RoomId = Convert.ToInt32(reader["RoomId"]),
-                            Day = reader["Day"].ToString(),
-                            StartTime = TimeSpan.Parse(reader["StartTime"].ToString()),
-                            EndTime = TimeSpan.Parse(reader["EndTime"].ToString())
+                            Day = reader["Day"].ToString() ?? string.Empty,
+                            StartTime = TimeSpan.TryParse(reader["StartTime"].ToString(), out var startTime) ? startTime : TimeSpan.Zero,
+                            EndTime = TimeSpan.TryParse(reader["EndTime"].ToString(), out var endTime) ? endTime : TimeSpan.Zero
                         };
                     }
                 }

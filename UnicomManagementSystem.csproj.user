@@ -4,6 +4,9 @@
     <Compile Update="Form1.cs">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Update="View\class.cs">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Update="View\Course.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -26,6 +29,9 @@
       <SubType>Form</SubType>
     </Compile>
     <Compile Update="View\TimeTable.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="View\UserManagement.cs">
       <SubType>Form</SubType>
     </Compile>
   </ItemGroup>

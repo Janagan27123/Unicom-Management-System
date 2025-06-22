@@ -30,68 +30,73 @@ namespace UnicomManagementSystem
         /// </summary>
         private void InitializeComponent()
         {
-            lbl_unicomtic = new Label();
-            lbl_userid = new Label();
-            lbl_password = new Label();
-            textBox1 = new TextBox();
-            textBox2 = new TextBox();
-            SuspendLayout();
+            this.lbl_unicomtic = new System.Windows.Forms.Label();
+            this.lbl_userid = new System.Windows.Forms.Label();
+            this.lbl_password = new System.Windows.Forms.Label();
+            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.SuspendLayout();
             // 
             // lbl_unicomtic
             // 
-            lbl_unicomtic.AutoSize = true;
-            lbl_unicomtic.Location = new Point(293, 30);
-            lbl_unicomtic.Name = "lbl_unicomtic";
-            lbl_unicomtic.Size = new Size(76, 15);
-            lbl_unicomtic.TabIndex = 0;
-            lbl_unicomtic.Text = "UNICOM TIC";
+            this.lbl_unicomtic.AutoSize = true;
+            this.lbl_unicomtic.Location = new System.Drawing.Point(335, 40);
+            this.lbl_unicomtic.Name = "lbl_unicomtic";
+            this.lbl_unicomtic.Size = new System.Drawing.Size(92, 20);
+            this.lbl_unicomtic.TabIndex = 0;
+            this.lbl_unicomtic.Text = "UNICOM TIC";
             // 
             // lbl_userid
             // 
-            lbl_userid.AutoSize = true;
-            lbl_userid.Location = new Point(205, 95);
-            lbl_userid.Name = "lbl_userid";
-            lbl_userid.Size = new Size(44, 15);
-            lbl_userid.TabIndex = 1;
-            lbl_userid.Text = "User ID";
+            this.lbl_userid.AutoSize = true;
+            this.lbl_userid.Location = new System.Drawing.Point(234, 127);
+            this.lbl_userid.Name = "lbl_userid";
+            this.lbl_userid.Size = new System.Drawing.Size(57, 20);
+            this.lbl_userid.TabIndex = 1;
+            this.lbl_userid.Text = "User ID";
             // 
             // lbl_password
             // 
-            lbl_password.AutoSize = true;
-            lbl_password.Location = new Point(205, 150);
-            lbl_password.Name = "lbl_password";
-            lbl_password.Size = new Size(57, 15);
-            lbl_password.TabIndex = 2;
-            lbl_password.Text = "Password";
+            this.lbl_password.AutoSize = true;
+            this.lbl_password.Location = new System.Drawing.Point(234, 200);
+            this.lbl_password.Name = "lbl_password";
+            this.lbl_password.Size = new System.Drawing.Size(70, 20);
+            this.lbl_password.TabIndex = 2;
+            this.lbl_password.Text = "Password";
             // 
             // textBox1
             // 
-            textBox1.Location = new Point(282, 92);
-            textBox1.Name = "textBox1";
-            textBox1.Size = new Size(145, 23);
-            textBox1.TabIndex = 3;
+            this.textBox1.Location = new System.Drawing.Point(322, 123);
+            this.textBox1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.textBox1.Name = "textBox1";
+            this.textBox1.Size = new System.Drawing.Size(165, 27);
+            this.textBox1.TabIndex = 3;
             // 
             // textBox2
             // 
-            textBox2.Location = new Point(282, 142);
-            textBox2.Name = "textBox2";
-            textBox2.Size = new Size(145, 23);
-            textBox2.TabIndex = 4;
+            this.textBox2.Location = new System.Drawing.Point(322, 189);
+            this.textBox2.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.textBox2.Name = "textBox2";
+            this.textBox2.Size = new System.Drawing.Size(165, 27);
+            this.textBox2.TabIndex = 4;
             // 
             // Form1
             // 
-            AutoScaleDimensions = new SizeF(7F, 15F);
-            AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(800, 450);
-            Controls.Add(textBox2);
-            Controls.Add(textBox1);
-            Controls.Add(lbl_password);
-            Controls.Add(lbl_userid);
-            Controls.Add(lbl_unicomtic);
-            Name = "Form1";
-            Text = "Form1";
-            ResumeLayout(false);
-            PerformLayout();
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
+            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.ClientSize = new System.Drawing.Size(914, 600);
+            this.Controls.Add(this.textBox2);
+            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.lbl_password);
+            this.Controls.Add(this.lbl_userid);
+            this.Controls.Add(this.lbl_unicomtic);
+            this.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.Name = "Form1";
+            this.Text = "Form1";
+            this.Load += new System.EventHandler(this.Form1_Load);
+            this.ResumeLayout(false);
+            this.PerformLayout();
+
         }
 
         #endregion

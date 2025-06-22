@@ -3,15 +3,14 @@ using System.Collections.Generic;
 using System.Data.SQLite;
 using UnicomManagementSystem.Model;
 using BCrypt.Net;
-using UnicomManagementSystem.Model;
 
-namespace WinFormsApp_2025_06_02.Controllers
+namespace UnicomManagementSystem.Controller
 {
-    public class UserController
+    public class LoginController
     {
         private readonly string _connectionString;
 
-        public UserController(string connectionString)
+        public LoginController(string connectionString)
         {
             _connectionString = connectionString;
         }
@@ -24,7 +23,7 @@ namespace WinFormsApp_2025_06_02.Controllers
             using var conn = new SQLiteConnection(_connectionString);
             conn.Open();
 
-            string query = "SELECT Id, Name, Username, Role FROM Users";
+            string query = "SELECT Id, Username, Role FROM Users";
 
             using var cmd = new SQLiteCommand(query, conn);
             using var reader = cmd.ExecuteReader();
@@ -34,7 +33,6 @@ namespace WinFormsApp_2025_06_02.Controllers
                 users.Add(new User
                 {
                     Id = Convert.ToInt32(reader["Id"]),
-                    Name = reader["Name"].ToString() ?? string.Empty,
                     Username = reader["Username"].ToString() ?? string.Empty,
                     Role = Enum.TryParse<UserRole>(reader["Role"].ToString(), out var role) ? role : UserRole.Student
                 });
@@ -49,13 +47,12 @@ namespace WinFormsApp_2025_06_02.Controllers
             using var conn = new SQLiteConnection(_connectionString);
             conn.Open();
 
-            string query = "INSERT INTO Users (Name, Username, Password, Role) VALUES (@Name, @Username, @Password, @Role); " +
+            string query = "INSERT INTO Users (Username, Password, Role) VALUES (@Username, @Password, @Role); " +
                            "SELECT last_insert_rowid();";
 
             string hashedPassword = BCrypt.Net.BCrypt.HashPassword(plainPassword);
 
             using var cmd = new SQLiteCommand(query, conn);
-            cmd.Parameters.AddWithValue("@Name", user.Name);
             cmd.Parameters.AddWithValue("@Username", user.Username);
             cmd.Parameters.AddWithValue("@Password", hashedPassword);
             cmd.Parameters.AddWithValue("@Role", user.Role.ToString());
@@ -89,6 +86,32 @@ namespace WinFormsApp_2025_06_02.Controllers
             catch
             {
                 return false;
+            }
+        }
+
+        // Get user role after successful login
+        public UserRole? GetUserRole(string username)
+        {
+            try
+            {
+                using var conn = new SQLiteConnection(_connectionString);
+                conn.Open();
+
+                string query = "SELECT Role FROM Users WHERE Username = @Username";
+
+                using var cmd = new SQLiteCommand(query, conn);
+                cmd.Parameters.AddWithValue("@Username", username);
+
+                var roleString = cmd.ExecuteScalar() as string;
+
+                if (roleString != null && Enum.TryParse<UserRole>(roleString, out var role))
+                    return role;
+
+                return null;
+            }
+            catch
+            {
+                return null;
             }
         }
     }

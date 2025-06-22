@@ -1,11 +1,12 @@
 {
   "version": 2,
-  "dgSpecHash": "n+904rQd90A=",
+  "dgSpecHash": "kPCuE2OWnkivHBNuNBDLAEPTXnSvnBkvTh8C+OoWGIzD+MDqbnn5MtLC7oEfbfXHmsnKMDYZlMEjPvRwVxyJ3w==",
   "success": true,
-  "projectFilePath": "Z:\\UnicomManagementSystem\\UnicomManagementSystem\\UnicomManagementSystem.csproj",
+  "projectFilePath": "C:\\Users\\SK Jana\\Desktop\\lllll\\Unicom-Management-System\\UnicomManagementSystem.csproj",
   "expectedPackageFiles": [
-    "C:\\Users\\UT010657\\.nuget\\packages\\stub.system.data.sqlite.core.netstandard\\1.0.119\\stub.system.data.sqlite.core.netstandard.1.0.119.nupkg.sha512",
-    "C:\\Users\\UT010657\\.nuget\\packages\\system.data.sqlite.core\\1.0.119\\system.data.sqlite.core.1.0.119.nupkg.sha512"
+    "C:\\Users\\SK Jana\\.nuget\\packages\\bcrypt.net-next\\4.0.3\\bcrypt.net-next.4.0.3.nupkg.sha512",
+    "C:\\Users\\SK Jana\\.nuget\\packages\\stub.system.data.sqlite.core.netstandard\\1.0.119\\stub.system.data.sqlite.core.netstandard.1.0.119.nupkg.sha512",
+    "C:\\Users\\SK Jana\\.nuget\\packages\\system.data.sqlite.core\\1.0.119\\system.data.sqlite.core.1.0.119.nupkg.sha512"
   ],
   "logs": []
 }

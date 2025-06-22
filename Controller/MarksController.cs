@@ -36,7 +36,7 @@ namespace UnicomManagementSystem.Controller
                             Id = Convert.ToInt32(reader["Id"]),
                             StudentId = Convert.ToInt32(reader["StudentId"]),
                             ExamId = Convert.ToInt32(reader["ExamId"]),
-                            Marksvalue = Convert.ToInt32(reader["Score"])
+                            MarksValue = Convert.ToInt32(reader["Marksvalue"])
                         });
                     }
                 }
@@ -63,7 +63,7 @@ namespace UnicomManagementSystem.Controller
                             Id = Convert.ToInt32(reader["Id"]),
                             StudentId = Convert.ToInt32(reader["StudentId"]),
                             ExamId = Convert.ToInt32(reader["ExamId"]),
-                            Marksvalue = Convert.ToInt32(reader["Score"])
+                            MarksValue = Convert.ToInt32(reader["Marksvalue"])
                         };
                     }
                 }
@@ -79,7 +79,7 @@ namespace UnicomManagementSystem.Controller
                 var cmd = new SQLiteCommand(query, conn);
                 cmd.Parameters.AddWithValue("@StudentId", mark.StudentId);
                 cmd.Parameters.AddWithValue("@ExamId", mark.ExamId);
-                cmd.Parameters.AddWithValue("@Score", mark.Marksvalue);
+                cmd.Parameters.AddWithValue("@Score", mark.MarksValue);
 
                 conn.Open();
                 return cmd.ExecuteNonQuery() > 0;
@@ -94,7 +94,7 @@ namespace UnicomManagementSystem.Controller
                 var cmd = new SQLiteCommand(query, conn);
                 cmd.Parameters.AddWithValue("@StudentId", mark.StudentId);
                 cmd.Parameters.AddWithValue("@ExamId", mark.ExamId);
-                cmd.Parameters.AddWithValue("@Score", mark.Marksvalue);
+                cmd.Parameters.AddWithValue("@Score", mark.MarksValue);
                 cmd.Parameters.AddWithValue("@Id", mark.Id);
 
                 conn.Open();

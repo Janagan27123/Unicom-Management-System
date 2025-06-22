@@ -23,28 +23,28 @@ namespace UnicomManagementSystem.Data
                 Role TEXT NOT NULL
                 );
 
-                CREATE TABLE Courses (
+                CREATE TABLE IF NOT EXISTS Courses (
                 Id INTEGER PRIMARY KEY AUTOINCREMENT,
-                CourseName TEXT NOT NULL,               
+                CourseName TEXT NOT NULL
                 );
 
-                CREATE TABLE Students (
+                CREATE TABLE IF NOT EXISTS Students (
                 Id INTEGER PRIMARY KEY AUTOINCREMENT,
                 Name TEXT NOT NULL,
-                adress TEXT NOT NULL,
-                nic INTEGER NOT NULL,
+                Address TEXT NOT NULL,
+                NIC TEXT NOT NULL,
                 CourseId INTEGER,
                 FOREIGN KEY (CourseId) REFERENCES Courses(Id)
                 );
 
-                CREATE TABLE Subjects (
+                CREATE TABLE IF NOT EXISTS Subjects (
                 Id INTEGER PRIMARY KEY AUTOINCREMENT,
                 Name TEXT NOT NULL,
                 CourseId INTEGER,
                 FOREIGN KEY (CourseId) REFERENCES Courses(Id)
                 );
 
-                CREATE TABLE Exams (
+                CREATE TABLE IF NOT EXISTS Exams (
                 Id INTEGER PRIMARY KEY AUTOINCREMENT,
                 ExamName TEXT NOT NULL,
                 Date TEXT,
@@ -52,22 +52,22 @@ namespace UnicomManagementSystem.Data
                 FOREIGN KEY (SubjectId) REFERENCES Subjects(Id)
                 );
 
-                CREATE TABLE Marks (
+                CREATE TABLE IF NOT EXISTS Marks (
                 Id INTEGER PRIMARY KEY AUTOINCREMENT,
                 StudentId INTEGER,
                 ExamId INTEGER,
-                Marksvalue INTEGER,
+                MarksValue INTEGER,
                 FOREIGN KEY (StudentId) REFERENCES Students(Id),
                 FOREIGN KEY (ExamId) REFERENCES Exams(Id)
                 );
 
-                CREATE TABLE Rooms (
+                CREATE TABLE IF NOT EXISTS Rooms (
                 Id INTEGER PRIMARY KEY AUTOINCREMENT,
                 RoomNumber TEXT NOT NULL,
                 Capacity INTEGER
                 );
 
-                CREATE TABLE Timetables (
+                CREATE TABLE IF NOT EXISTS Timetables (
                 Id INTEGER PRIMARY KEY AUTOINCREMENT,
                 SubjectId INTEGER,
                 RoomId INTEGER,
